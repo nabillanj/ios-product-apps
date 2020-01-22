@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1dX-N7-XUl">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DetailProduct-->
+        <scene sceneID="5We-7B-J9h">
+            <objects>
+                <viewController storyboardIdentifier="DetailProductViewController" title="DetailProduct" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1dX-N7-XUl" customClass="DetailProductViewController" customModule="InterviewProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1aI-fb-72i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="R24-Ly-UqK">
+                                <rect key="frame" x="8" y="809" width="398" height="37"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KbB-ol-3Hb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="765"/>
+                                <connections>
+                                    <segue destination="BJm-dc-c09" kind="embed" id="njs-e3-BKi"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KbB-ol-3Hb" firstAttribute="top" secondItem="DEK-3G-Vg1" secondAttribute="top" id="7HF-V8-EUH"/>
+                            <constraint firstItem="DEK-3G-Vg1" firstAttribute="trailing" secondItem="R24-Ly-UqK" secondAttribute="trailing" constant="8" id="RgD-9p-Ppi"/>
+                            <constraint firstItem="R24-Ly-UqK" firstAttribute="bottom" secondItem="DEK-3G-Vg1" secondAttribute="bottom" constant="-16" id="XR0-uN-JDV"/>
+                            <constraint firstItem="R24-Ly-UqK" firstAttribute="top" secondItem="KbB-ol-3Hb" secondAttribute="bottom" id="aaw-Je-Dre"/>
+                            <constraint firstItem="R24-Ly-UqK" firstAttribute="leading" secondItem="DEK-3G-Vg1" secondAttribute="leading" constant="8" id="eXB-fG-0l3"/>
+                            <constraint firstItem="DEK-3G-Vg1" firstAttribute="trailing" secondItem="KbB-ol-3Hb" secondAttribute="trailing" id="nPA-ug-DYy"/>
+                            <constraint firstItem="KbB-ol-3Hb" firstAttribute="leading" secondItem="DEK-3G-Vg1" secondAttribute="leading" id="oGI-n7-27y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DEK-3G-Vg1"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageProductControl" destination="R24-Ly-UqK" id="W0o-m8-N84"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SDV-u4-9W0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="7gE-gF-U6D">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="BJm-dc-c09" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7eg-OQ-rBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="17"/>
+        </scene>
+    </scenes>
+</document>
